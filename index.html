@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Test Cybersécurité</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur le site de test en cybersécurité</h1>
+        <nav>
+            <ul>
+                <li><a href="#xss">Test XSS</a></li>
+                <li><a href="#sql">Test SQL Injection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="xss">
+        <h2>Test XSS (Cross-Site Scripting)</h2>
+        <form action="#" method="POST">
+            <label for="xss_input">Entrez du texte : </label>
+            <input type="text" id="xss_input" name="xss_input" placeholder="Essayez du code JavaScript">
+            <button type="submit">Soumettre</button>
+        </form>
+        <p>Résultat de votre entrée : <span id="xss_result"></span></p>
+    </section>
+
+    <section id="sql">
+        <h2>Test SQL Injection</h2>
+        <form action="#" method="POST">
+            <label for="sql_input">Entrez une requête SQL : </label>
+            <input type="text" id="sql_input" name="sql_input" placeholder="Ex: ' OR 1=1 --">
+            <button type="submit">Soumettre</button>
+        </form>
+        <p>Résultat de la requête : <span id="sql_result"></span></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Site de Test Cybersécurité</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
